@@ -9,15 +9,14 @@ document.getElementById("type").onchange = function(){
 }
 
 function checkHousehold(channels){
-    if(channels <= 10) return 100 - 7.5*(10-channels);
-    else return 100 + 7.5*(channels-10);
+    return 4.5 + 20.5 + 7.5*channels;
 }
 
 function checkEnterprise(channels,connects){
     if(connects <= 10)
-        return channels*50 + 75;
+        return channels*50 + 75 + 15;
     else
-        return channels*50 + 75 + (connects-10)*5;
+        return channels*50 + 75 + (connects-10)*5 + 15;
 }
 
 function check(){
